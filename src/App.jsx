@@ -29,7 +29,7 @@ function App() {
 
   const generateSummary = async () => {
     setLoading(true)
-    const response = await fetch("http://127.0.0.1:5000/generate", {
+    const response = await fetch("https://ai-study-assistant-backend-9len.onrender.com/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ notes: notes, type: "summary" })
@@ -53,7 +53,7 @@ function App() {
 
   const generateFlashcards = async () => {
     setLoading(true)
-    const response = await fetch("http://127.0.0.1:5000/generate", {
+    const response = await fetch("https://ai-study-assistant-backend-9len.onrender.com/generate", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ notes: notes, type: "flashcards" })
